@@ -45,7 +45,7 @@ padded_val = pad_sequences(sekuens_val)
 
 class callbacks(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
-    if(logs.get('accuracy') > 0.80 and logs.get('val_accuracy') > 0.74):
+    if(logs.get('accuracy') > 0.80 and logs.get('val_accuracy') > 0.75):
       print('\nAkurasi diatas 80%')
       self.model.stop_training = True
 
